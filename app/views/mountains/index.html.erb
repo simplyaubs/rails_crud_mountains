@@ -1,0 +1,21 @@
+<%= form_for @mountain do |f| %>
+  <p>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  </p>
+  <p>
+  <%= f.label :height %>
+  <%= f.text_field :height %>
+  </p>
+  <p>
+    <%= f.submit 'Add mountain' %>
+  </p>
+<% end %>
+
+<%= @mountains.each do |mountain| %>
+<ul>
+  <li>
+    <%= mountain.name %>, <%= mountain.height %>
+  </li>
+</ul>
+<% end %>
