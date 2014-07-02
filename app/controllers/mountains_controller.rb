@@ -15,6 +15,21 @@ class MountainsController < ApplicationController
     end
   end
 
+  def show
+    @mountain = Mountain.find(params[:id])
+  end
+
+  def edit
+    @mountain = Mountain.find(params[:id])
+  end
+
+  def update
+    @mountain = Mountain.find(params[:id])
+    @mountain.update_attributes!(mountain_params)
+
+    redirect_to mountains_path
+  end
+
   private
   def mountain_params
     params.require(:mountain).permit(:name, :height)

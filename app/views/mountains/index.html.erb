@@ -15,7 +15,7 @@
 <%= @mountains.each do |mountain| %>
 <ul>
   <li>
-    <%= mountain.name %>, <%= mountain.height %>
+    <%= link_to "#{mountain.name}", mountain_path(mountain) %>, <%= mountain.height %>
   </li>
 </ul>
 <% end %>

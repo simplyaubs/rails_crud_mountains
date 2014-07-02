@@ -1,0 +1,13 @@
+<%= form_for @mountain do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :height %>
+    <%= f.text_field :height %>
+  </p>
+  <p>
+    <%= f.submit 'Update mountain' %>
+  </p>
+<% end %>
