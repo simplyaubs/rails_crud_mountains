@@ -30,6 +30,12 @@ class MountainsController < ApplicationController
     redirect_to mountains_path
   end
 
+  def destroy
+    @mountain = Mountain.find(params[:id]).delete
+
+    redirect_to mountains_path
+  end
+
   private
   def mountain_params
     params.require(:mountain).permit(:name, :height)
